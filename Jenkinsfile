@@ -11,13 +11,13 @@ pipeline {
                '''
             }
         }
-        stage('eks deploy') {
-            steps {
-                sh '''
-                 cd k8s/
-               kubectl apply -f .
-               '''
-            }
-        }
+        // stage('eks deploy') {
+        //     steps {
+        //         sh '''
+        //          cd k8s/
+        //        kubectl apply -f .
+        //        '''
+        //     }
+        // }
     }
 }
