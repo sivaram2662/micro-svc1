@@ -41,12 +41,12 @@ pipeline {
         }
         stage('build ') {
             steps {
-               sh "sudo docker build -t 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest ."
+               sh "sudo docker build -t 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:$BUILD_NUMBER"
             }
         }
          stage('push') {
             steps {
-               sh " sudo docker push 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest"
+               sh " sudo docker push 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:$BUILD_NUMBER"
         }
     }
        stage('eks deploy') {
