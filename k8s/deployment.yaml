@@ -26,7 +26,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  static-website
-        image: 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:$BUILD_NUMBER
+        image: 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest
         resources:
           requests:
             cpu: 100m
