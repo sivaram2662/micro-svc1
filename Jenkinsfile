@@ -49,6 +49,12 @@ pipeline {
                sh " sudo docker push 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest"
         }
     }
+       stage('eks deploy') {
+            steps {
+              sh '''
+              helm upgrade -i static-dev static -n dev 
+              '''
+    }
 }
 }
 
