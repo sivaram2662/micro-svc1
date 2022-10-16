@@ -1,4 +1,4 @@
-appVersion: v1
-kind: namespace
-metadata:
-  name: {{ .Values.namespace }}
+# appVersion: v1
+# kind: namespace
+# metadata:
+#   name: {{ .Values.namespace }}
