@@ -52,6 +52,7 @@ pipeline {
        stage('eks deploy') {
             steps {
               sh '''
+              kubectl create ns dev 
               helm upgrade -i static-dev static -n dev 
               '''
     }
