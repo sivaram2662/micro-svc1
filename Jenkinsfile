@@ -45,6 +45,11 @@ pipeline {
                sh "sudo docker build -t 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest ."
             }
         }
+        
+        stage('push') {
+            steps {
+               sh " sudo docker push 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest"
+        }
     }
 }
 
