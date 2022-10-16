@@ -31,8 +31,7 @@ pipeline {
         stage('checkout') {
             steps {
                 git branch: 'feature-docker', url: 'git@github.com:sivaram2662/micro-svc1.git'
-               sh  'ls'
-                
+               sh  'ls'    
             }
         }
          stage('login') {
@@ -45,12 +44,12 @@ pipeline {
                sh "sudo docker build -t 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest ."
             }
         }
-        
-        stage('push') {
+         stage('push') {
             steps {
                sh " sudo docker push 101275806917.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest"
         }
     }
+}
 }
 
 
