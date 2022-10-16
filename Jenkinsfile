@@ -31,6 +31,8 @@ pipeline {
         stage('checkout') {
             steps {
                 git branch: 'feature-docker', url: 'git@github.com:sivaram2662/micro-svc1.git'
+               sh  'ls'
+                
             }
         }
     }
