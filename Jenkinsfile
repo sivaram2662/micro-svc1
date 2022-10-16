@@ -35,6 +35,11 @@ pipeline {
                 
             }
         }
+         stage('login') {
+            steps {
+               sh "aws ecr get-login-password --region ap-south-1 | sudo docker login --username AWS --password-stdin 101275806917.dkr.ecr.ap-south-1.amazonaws.com"
+            }
+        }
     }
 }
 
